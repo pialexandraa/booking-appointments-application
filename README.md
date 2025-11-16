@@ -1,3 +1,13 @@
+**[Work in progress]**
+- At the moment, I just wrote a lot of code (many functions and helpers). There must be a refactoring done to "slim down" the process and finalize a comprehensive data flow.
+Initially, the application was supposed to be small, but later, I decided to introduce the JSON files, stored in "data."
+
+- This led me to create an extensive set of functions and atomic helpers - see "storage_logic.py" :) obviously, this introduced 2 paths/routes of data writting and fetching - via the slot_times.py (with more traditional functions I wrote) and the option with derived availability via the JSON files.
+
+- Also, main.py has to be refined.
+
+
+---
 Title: **Booking appointments application (for a Veterinary clinic)**
 
 Description: The application is designed to be a booking system for the Vet clinic. That means that structurally, it can write, retain, remove, and manipulate information about bookings and the respective time slots.
