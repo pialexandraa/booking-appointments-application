@@ -3,10 +3,24 @@ import logging
 from constants import *
 from slot_times import (add_slot, check_slot, filter_slots_by_date, filter_slots_by_vet, make_slot, make_daily_slots)
 from appointments_logic.core import appointment_slot, add_appointment, make_appointment
-from vet_schedules import (find_vet_schedule)
 
 # Initializing the logger
 logger = logging.getLogger(__name__)
+
+# Helper function for associating a date with a weekday
+def get_current_day(date):
+    if not isinstance(date, dt.date):
+        raise TypeError("Please, insert a valid date for the appointment.")
+    else:
+        return WEEKDAYS[date.weekday()]
+    
+# Helper function to finding a vet schedule
+def find_vet_schedule(schedule: Dict, vet: str) -> List[str]:
+    if vet not in schedule.items():
+        logger.warning(f"The specified vet '{vet}' does not exist. Please, choose a valid vet from the list:\n")
+        return None
+    else:
+        return schedule[vet]    
 
 # High-level logic for the appointment system
 def create_appointment(appointments, appointment, available_slots, reserved_slots):
