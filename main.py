@@ -1,4 +1,4 @@
-from asyncio.log import logger
+import logging
 from appointments_logic.core import (appointment_slot, appointment_customer, add_appointment, check_appointment_status, remove_appointment)
 from appointments_logic.service import create_appointment, make_appointment, get_available_slots_for_vet
 from constants import *
