@@ -1,5 +1,5 @@
 **[Work in progress]**
-- At the moment, I just wrote a lot of code (many functions and helpers). There must be a refactoring done to "slim down" the process and finalize a comprehensive data flow.
+- At the moment, I wrote a lot of code (many functions and helpers). There must be a refactoring done to "slim down" the process and finalize a comprehensive data flow.
 Initially, the application was supposed to be small, but later, I decided to introduce the JSON files, stored in "data."
 
 - This led me to create an extensive set of functions and atomic helpers - see "storage_logic.py" :) obviously, this introduced 2 paths/routes of data writting and fetching - via the slot_times.py (with more traditional functions I wrote) and the option with derived availability via the JSON files.
